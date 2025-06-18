@@ -4,12 +4,12 @@ import {
   UnauthorizedException,
   UnprocessableEntityException,
 } from '@nestjs/common';
-import { CreateUserDto } from './dto/create-user.dto';
+import { CreateUserDto } from '../dto/create-user.dto';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { compare, hash } from 'bcrypt';
 import { Response } from 'express';
 import { JwtService } from '@nestjs/jwt';
-import { generateOtp } from './utils/otp.util';
+import { generateOtp } from '../utils/otp.util';
 import { MessageService } from './message.service';
 
 @Injectable()
